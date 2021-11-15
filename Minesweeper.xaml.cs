@@ -112,7 +112,7 @@ namespace WpfApp1
                 MineLabel label = child as MineLabel;
                 if (label != null)
                 {
-                    bool isMine = rand.Next(4) == 0;
+                    bool isMine = rand.Next(6) == 0;
                     label.IsMine = isMine;
                     label.Content = "";
                     label.Foreground = Brushes.Black;
@@ -196,7 +196,8 @@ namespace WpfApp1
 
             LabelContent(mines, mineLabel);
 
-            // открываем все ячейки, сопряженные с пустыми
+            // открываем все пустые ячейки, сопряженные с данной
+            // пустой ячейкой при помощи рекурсии
             if (mines == 0)
             {
                 foreach (String name in names)
@@ -239,60 +240,42 @@ namespace WpfApp1
         {
             mineLabel.Content = mines;
 
-            var numb = new ColorNumber(mines);
+            switch(mines)
+            {
+                case 0:
+                    mineLabel.Foreground = Brushes.White; 
+                    break;
+                case 1:
+                    mineLabel.Foreground = Brushes.DarkGreen;
+                    break;
+                case 2:
+                    mineLabel.Foreground = Brushes.Blue;
+                    break;
+                case 3:
+                    mineLabel.Foreground = Brushes.Brown;
+                    break;
+                case 4:
+                    mineLabel.Foreground = Brushes.Orange;
+                    break;
+                case 5:
+                    mineLabel.Foreground = Brushes.Pink;
+                    break;
+                case 6:
+                    mineLabel.Foreground = Brushes.Purple;
+                    break;
+                case 7:
+                    mineLabel.Foreground = Brushes.Silver;
+                    break;
+                case 8:
+                    mineLabel.Foreground = Brushes.Beige;
+                    break;
+                default:
+                    break;
+            }
 
-            mineLabel.Foreground = (Brush)System.ComponentModel.TypeDescriptor
-                                    .GetConverter(typeof(Brush)).ConvertFromInvariantString(numb.Color);
         }
     }
-    class ColorNumber
-        {
-            public int Num { get; set; }
-            public string Color { get; set; }
 
-            public ColorNumber(int num)
-            {
-                Num = num;
-
-                switch (num)
-                {
-                    case 0:
-                        Color = "White";
-                        break;
-                    case 1:
-                        Color = "DarkGreen";
-                        break;
-                    case 2:
-                        Color = "Blue";
-                        break;
-                    case 3:
-                        Color = "Brown";
-                        break;
-                    case 4:
-                        Color = "Orange";
-                        break;
-                    case 5:
-                        Color = "Pink";
-                        break;
-                    case 6:
-                        Color = "Purple";
-                        break;
-                    case 7:
-                        Color = "Silver";
-                        break;
-                    case 8:
-                        Color = "Beige";
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-            public override string ToString()
-            {
-                return Num.ToString();
-            }
-        }
     class MineLabel : Label
     {
         public bool IsMine { get; set; }
