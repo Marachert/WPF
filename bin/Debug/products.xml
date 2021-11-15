@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfProduct xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Product>
+    <SN>1</SN>
+    <Name>Хлеб</Name>
+    <Price>25</Price>
+    <Discount>1</Discount>
+  </Product>
+  <Product>
+    <SN>2</SN>
+    <Name>Сало</Name>
+    <Price>75</Price>
+    <Discount>0</Discount>
+  </Product>
+  <Product>
+    <SN>3</SN>
+    <Name>Водка</Name>
+    <Price>99</Price>
+    <Discount>1</Discount>
+  </Product>
+  <Product>
+    <SN>4</SN>
+    <Name>Хрен</Name>
+    <Price>40</Price>
+    <Discount>5</Discount>
+  </Product>
+</ArrayOfProduct>

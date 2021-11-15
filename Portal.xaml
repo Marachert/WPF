@@ -1,0 +1,93 @@
+﻿<Window x:Class="WpfApp1.Portal"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Portal" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button
+            x:Name="Serialization"
+            Content="Сериализация"
+            FontSize="34"
+            Click="Serialization_Click"/>
+
+        <Button
+            Grid.Column="0" Grid.Row="1"
+            x:Name="FracCalc"
+            Content="Калькулятор"
+            FontSize="34"
+            Click="FracCalc_Click"/>
+
+        <Button
+            Grid.Column="0" Grid.Row="2"
+            x:Name="Strings"            
+            FontSize="34"
+            Click="Strings_Click">
+
+            <StackPanel Orientation="Horizontal">
+                <Image Source="original.jpg"
+                       Stretch="Uniform" Width="100"></Image>
+            
+            <WrapPanel Orientation="Vertical">
+                <Label>Работа со</Label>
+                <Label>строками</Label>
+            </WrapPanel>
+            </StackPanel>
+        </Button>
+
+        <Button
+            Grid.Column="1" Grid.Row="0"
+            x:Name="Tabs"
+            FontSize="34"
+            Content="Tab-Control"
+            Click="Tabs_Click"/>
+
+        <Button
+            Grid.Column="1" Grid.Row="1"
+            x:Name="tanks"
+            FontSize="25"
+            Click="Tanks_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Tank.jpeg"
+                       Stretch="Uniform" Width="80"/>
+
+                <WrapPanel Orientation="Vertical">
+                    <Label>События</Label>
+                    <Label>танчик</Label>
+                </WrapPanel>
+            </StackPanel>
+        </Button>
+
+        <Button
+            Grid.Column="1" Grid.Row="2"
+            x:Name="minesweeper"
+            FontSize="25"
+            Click="Minesweeper_Click">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="mine.png"
+                       Stretch="Uniform" Width="80"/>
+
+                <WrapPanel Orientation="Vertical">
+                    <Label>Связывание</Label>
+                    <Label>сапер</Label>
+                </WrapPanel>
+            </StackPanel>
+        </Button>
+
+
+    </Grid>
+</Window>

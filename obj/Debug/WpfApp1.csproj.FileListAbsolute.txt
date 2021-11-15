@@ -1,0 +1,110 @@
+D:\.NET на С#\WpfApp1\bin\Debug\WpfApp1.exe.config
+D:\.NET на С#\WpfApp1\bin\Debug\WpfApp1.exe
+D:\.NET на С#\WpfApp1\bin\Debug\WpfApp1.pdb
+D:\.NET на С#\WpfApp1\obj\Debug\MainWindow.g.cs
+D:\.NET на С#\WpfApp1\obj\Debug\App.g.cs
+D:\.NET на С#\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+D:\.NET на С#\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+D:\.NET на С#\WpfApp1\obj\Debug\MainWindow.baml
+D:\.NET на С#\WpfApp1\obj\Debug\WpfApp1.g.resources
+D:\.NET на С#\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+D:\.NET на С#\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+D:\.NET на С#\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+D:\.NET на С#\WpfApp1\obj\Debug\WpfApp1.exe
+D:\.NET на С#\WpfApp1\obj\Debug\WpfApp1.pdb
+D:\.NET на С#\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\Maru_ul82\Desktop\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\Maru_ul82\Desktop\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\Maru_ul82\Desktop\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\Portal.g.cs
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\App.g.cs
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\Portal.baml
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\FracCalc.g.cs
+C:\Users\Maru_ul82\Desktop\WpfApp1\obj\Debug\FracCalc.baml
+C:\Users\Maru_ul82\Desktop\Sergey\bin\Debug\WpfApp1.exe.config
+C:\Users\Maru_ul82\Desktop\Sergey\bin\Debug\WpfApp1.exe
+C:\Users\Maru_ul82\Desktop\Sergey\bin\Debug\WpfApp1.pdb
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\FracCalc.g.cs
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\MainWindow.g.cs
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\Portal.g.cs
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\App.g.cs
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\FracCalc.baml
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\MainWindow.baml
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\Portal.baml
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\WpfApp1.g.resources
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\WpfApp1.exe
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\WpfApp1.pdb
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\Strings.g.cs
+C:\Users\Maru_ul82\Desktop\Sergey\obj\Debug\Strings.baml
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\bin\Debug\WpfApp1.exe.config
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\bin\Debug\WpfApp1.exe
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\bin\Debug\WpfApp1.pdb
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\WpfApp1.csproj.AssemblyReference.cache
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\FracCalc.g.cs
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\MainWindow.g.cs
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\Portal.g.cs
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\Strings.g.cs
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\App.g.cs
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\FracCalc.baml
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\MainWindow.baml
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\Portal.baml
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\Strings.baml
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\WpfApp1.g.resources
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\WpfApp1.exe
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\WpfApp1.pdb
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\bin\Debug\WpfApp1.exe.config
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\bin\Debug\WpfApp1.exe
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\bin\Debug\WpfApp1.pdb
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\FracCalc.g.cs
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\Portal.g.cs
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\Strings.g.cs
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\App.g.cs
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\FracCalc.baml
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\MainWindow.baml
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\Portal.baml
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\Strings.baml
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\WpfApp1.g.resources
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\WpfApp1.exe
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\WpfApp1.pdb
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\Tabs.g.cs
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\Tabs.baml
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\Tabs.g.cs
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\Tabs.baml
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\Tanks.g.cs
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\Tanks.baml
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\Tanks.g.cs
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\Tanks.baml
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\Minesweeper.g.cs
+C:\Users\Maru_ul82\Desktop\ClassWorkWPF\obj\Debug\Minesweeper.baml
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\WpfApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\Minesweeper.g.cs
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\ClassWorkWPF\obj\Debug\Minesweeper.baml
