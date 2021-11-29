@@ -196,3 +196,5 @@ C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\Ar
 C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\Arkanoid.baml
 C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\Styles.g.cs
 C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\Styles.baml
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\DnD.g.cs
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\DnD.baml
