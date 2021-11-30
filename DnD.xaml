@@ -5,28 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="DnD" Height="450" Width="800"
-         MouseUp="Mouse_Up"
+        Title="DnD" 
+        Height="450" 
+        Width="800"
+        MouseUp="Mouse_Up"
         MouseMove="Mouse_Move"
         >
     <Canvas x:Name="Field">
-        <Rectangle
-            MouseDown="Subj_MouseDown" 
-            x:Name="Subj"
-            Fill="DarkSalmon"
+        <Ellipse 
+            MouseDown="Subj_MouseDown"
+            x:Name="Subj" 
+            Fill="LightBlue"
             Width="100"
-            Height="150"
+            Height="50"
             Canvas.Left="100"
-            Canvas.Top="75">
-        </Rectangle>
-        <Rectangle 
-            x:Name="Subject2"
+            Canvas.Top="75" />
+
+        <Ellipse 
+            MouseDown="Subj_MouseDown"
+            x:Name="Subj2" 
+            Fill="RosyBrown"
+            Width="100"
+            Height="50"
+            Canvas.Left="100"
+            Canvas.Top="175" />
+
+        <Ellipse 
+            MouseDown="Subj_MouseDown"
+            x:Name="Subj3" 
+            Fill="Salmon"
+            Width="100"
+            Height="50"
+            Canvas.Left="100"
+            Canvas.Top="275" />
+
+        <Image
+            MouseDown="Subj_MouseDown"
+            x:Name="Subj4"
+            Source="/WpfApp1;component/salmon.png"
+            Stretch="Fill"
+            Width="100"
+            Height="70"
+            Canvas.Left="192"
+            Canvas.Top="330"/>
+
+        <Rectangle
+            x:Name="TargetFrame"
             Stroke="SeaGreen"
-             Width="200"
+            Width="200"
             Height="300"
             Canvas.Left="400"
-            Canvas.Top="105">
+            Canvas.Top="105" />
 
-        </Rectangle>
+        <Ellipse
+            MouseDown="Subj_MouseDown"
+            Fill="Tomato"
+            Width="50"
+            Height="100"
+            Canvas.Left="262"
+            Canvas.Top="75" />
     </Canvas>
 </Window>
