@@ -12,6 +12,36 @@
              применяемых ко всем элементам 
              определенного типа (TargetType)
         -->
+
+        <Style x:Key="LargeCenteredColorful">
+            <Setter Property="Control.Background">
+                <Setter.Value>
+                    <LinearGradientBrush
+                        StartPoint="0 0"
+                        EndPoint="1 1">
+                        <GradientStop 
+                            Offset="0.2"
+                            Color="PaleGoldenrod" />
+                        <GradientStop 
+                            Offset="0.5"
+                            Color="LawnGreen" />
+                        <GradientStop 
+                            Offset="1"
+                            Color="Yellow" />
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter 
+                Property="Control.HorizontalAlignment"
+                Value="Center"/>
+            <Setter
+                Property="Control.VerticalAlignment"
+                Value="Center"/>
+            <Setter 
+                Property="Control.FontSize"
+                Value="36"/>
+        </Style>
+        
         <Style TargetType="Label">
             <!-- Вместо FontSize=30
                  используется Setter -->
@@ -104,7 +134,7 @@
         <!-- Применение индивидуального
         стиля полностью отменяет глобальный -->
         <Label Style="{StaticResource ResourceKey=CenteredContent}">Label 5</Label>
-        <Label Style="{StaticResource ResourceKey=BigCentered}">Label 6</Label>
+        <Label Style="{StaticResource ResourceKey=LargeCenteredColorful}">Label 6</Label>
         <Label>Label 7</Label>
         <Label>Label 8</Label>
 
