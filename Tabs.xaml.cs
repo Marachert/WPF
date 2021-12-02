@@ -14,7 +14,6 @@ using System.Windows.Shapes;
 
 namespace WpfApp1
 {
-
     public partial class Tabs : Window
     {
         private bool mouseHold;
