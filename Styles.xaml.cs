@@ -36,13 +36,10 @@ namespace WpfApp1
 
         private void Button2_Click(object sender, RoutedEventArgs e)
         {
-            uniGrid.Children.Add(
-                new Label
-                {
-                    Content = "Label Big",
-                    Style = FindResource("BigCentered") as Style
-                }
-            );
+            this.Hide();
+            new FeedBack().ShowDialog();
+            this.Show();
         }
+
     }
 }

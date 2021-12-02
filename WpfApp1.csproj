@@ -61,10 +61,17 @@
     <Compile Include="DnD.xaml.cs">
       <DependentUpon>DnD.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FeedBack.xaml.cs">
+      <DependentUpon>FeedBack.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Minesweeper.xaml.cs">
       <DependentUpon>Minesweeper.xaml</DependentUpon>
     </Compile>
     <Compile Include="Product.cs" />
+    <Compile Include="Segment.cs" />
+    <Compile Include="Snake.xaml.cs">
+      <DependentUpon>Snake.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Strings.xaml.cs">
       <DependentUpon>Strings.xaml</DependentUpon>
     </Compile>
@@ -82,6 +89,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="DnD.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FeedBack.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -109,6 +120,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Portal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Snake.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,6 +194,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="salmon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="snake.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

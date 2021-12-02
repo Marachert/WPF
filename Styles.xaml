@@ -127,7 +127,7 @@
         <Label>Label 4</Label>
 
         <Button Click="Button_Click">Button 1</Button>
-        <Button Click="Button2_Click">Button 2</Button>
+        <Button Click="Button2_Click">Feedback</Button>
         <Button>Button 3</Button>
         <Button>Button 4</Button>
 
@@ -136,7 +136,7 @@
         <Label Style="{StaticResource ResourceKey=CenteredContent}">Label 5</Label>
         <Label Style="{StaticResource ResourceKey=LargeCenteredColorful}">Label 6</Label>
         <Label>Label 7</Label>
-        <Label>Label 8</Label>
+        <Label>Label 8</Label>  
 
     </UniformGrid>
 </Window>

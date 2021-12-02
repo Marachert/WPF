@@ -198,3 +198,7 @@ C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\St
 C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\Styles.baml
 C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\DnD.g.cs
 C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\DnD.baml
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\FeedBack.g.cs
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\FeedBack.baml
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\Snake.g.cs
+C:\Users\marac\OneDrive\Desktop\УЧЕБА\C#\HomeWork\Done\WPF_GIT\obj\Debug\Snake.baml
