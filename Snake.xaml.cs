@@ -23,6 +23,11 @@ namespace WpfApp1
         private LinkedList<Segment> Pyton;
         DispatcherTimer timer;
         HoldKey holdkey;
+        bool headRight = true;
+        bool headUp = false;
+        bool headDown = false;
+        bool headLeft = false;
+
         public Snake()
         {
             InitializeComponent();
@@ -50,166 +55,136 @@ namespace WpfApp1
 
         private void TimerTick(object sender, EventArgs e)
         {
-            Segment pytonHead = null;
-            Segment pytonTail = null;
-
             switch (holdkey)
             {
                 case HoldKey.Left:
-                    pytonHead = Pyton.First();
-                    pytonTail = Pyton.Last();
 
-                    Field.Children.Remove(pytonTail.Figure);
-
-                    Pyton.AddFirst(new Segment 
+                    if (headRight == false)
                     {
-                        Figure = new Ellipse
-                        {
-                            Width = 20,
-                            Height = 20,
-                            Fill = Brushes.Green
-                        },
-                        X = pytonHead.X - 10,
-                        Y = pytonHead.Y
-                    });
+                        headRight = false;
+                        headLeft = true;
+                        headUp = false;
+                        headDown = false;
 
-                    Pyton.Remove(pytonTail);
-                    pytonHead = Pyton.First();
+                        PytonStep(-10d, 0d);
+                    }
+                    else
+                    {
+                        goto case HoldKey.Right;
+                    }
 
-                    Field.Children.Add(pytonHead.Figure);
-                    Canvas.SetLeft(pytonHead.Figure, pytonHead.X);
-                    Canvas.SetTop(pytonHead.Figure, pytonHead.Y);
 
                     break;
 
                 case HoldKey.Right:
-                    pytonHead = Pyton.Last();
-                    pytonTail = Pyton.First();
-
-                    Field.Children.Remove(pytonTail.Figure);
-
-                    Pyton.AddLast(new Segment //попробуй использовать делегат 
+                    if (headLeft == false)
                     {
-                        Figure = new Ellipse
-                        {
-                            Width = 20,
-                            Height = 20,
-                            Fill = Brushes.Green
-                        },
-                        X = pytonHead.X + 10,
-                        Y = pytonHead.Y
-                    });
+                        headLeft = false;
+                        headRight = true;
+                        headUp = false;
+                        headDown = false;
 
-                    Pyton.Remove(pytonTail);
-                    pytonHead = Pyton.Last();
-
-                    Field.Children.Add(pytonHead.Figure);
-                    Canvas.SetLeft(pytonHead.Figure, pytonHead.X);
-                    Canvas.SetTop(pytonHead.Figure, pytonHead.Y);
+                        PytonStep(10d, 0d);
+                    }
+                    else
+                    {
+                        goto case HoldKey.Left;
+                    }
 
                     break;
 
+                case HoldKey.Up:
 
-                    //    case HoldKey.Right:
-                    //        Field.Children.Remove(Pyton[0].Figure);
+                    if (headDown == false)
+                    {
+                        headLeft = false;
+                        headRight = false;
+                        headUp = true;
+                        headDown = false;
 
-                    //        Pyton.Add(new Segment
-                    //        {
-                    //            Figure = new Ellipse
-                    //            {
-                    //                Width = 20,
-                    //                Height = 20,
-                    //                Fill = Brushes.Green
-                    //            },
-                    //            X = Pyton.Last().X + 10,
-                    //            Y = Pyton.Last().Y
-                    //        });
-                    //        Pyton.RemoveAt(0);
-                    //        Field.Children.Add(Pyton.Last().Figure);
+                        PytonStep(0d, -10d);
+                    }
+                    else
+                    {
+                        goto case HoldKey.Down;
+                    }
 
-                    //        Canvas.SetLeft(Pyton.Last().Figure, Pyton.Last().X);
-                    //        Canvas.SetTop(Pyton.Last().Figure, Pyton.Last().Y);
+                    break;
 
-                    //        break;
+                case HoldKey.Down:
 
-                    //    case HoldKey.Up:
-                    //        Field.Children.Remove(Pyton[0].Figure);
+                    if (headUp == false)
+                    {
+                        headLeft = false;
+                        headRight = false;
+                        headUp = false;
+                        headDown = true;
 
-                    //        Pyton.Add(new Segment
-                    //        {
-                    //            Figure = new Ellipse
-                    //            {
-                    //                Width = 20,
-                    //                Height = 20,
-                    //                Fill = Brushes.Green
-                    //            },
-                    //            X = Pyton.Last().X,
-                    //            Y = Pyton.Last().Y - 10,
-                    //        });
-                    //        Pyton.RemoveAt(0);
-                    //        Field.Children.Add(Pyton.Last().Figure);
+                        PytonStep(0d, 10d);
+                    }
+                    else
+                    {
+                        goto case HoldKey.Up;
+                    }
 
-                    //        Canvas.SetLeft(Pyton.Last().Figure, Pyton.Last().X);
-                    //        Canvas.SetTop(Pyton.Last().Figure, Pyton.Last().Y);
-
-                    //        break;
-
-
+                    break;
             }
         }
 
-            private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            timer.Start();
+            foreach (var segment in Pyton)
             {
-                timer.Start();
-                foreach (var segment in Pyton)
-                {
-                    segment.Show(Field);
-                }
+                segment.Show(Field);
             }
+        }
 
-            private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        private void Window_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.Key)
             {
-                switch (e.Key)
-                {
-                    case Key.Left:
-                        holdkey = HoldKey.Left;
-                        break;
-                    case Key.Right:
-                        holdkey = HoldKey.Right;
-                        break;
-                    case Key.Up:
-                        holdkey = HoldKey.Up;
-                        break;
-
-
-                }
+                case Key.Left:
+                    holdkey = HoldKey.Left;
+                    break;
+                case Key.Right:
+                    holdkey = HoldKey.Right;
+                    break;
+                case Key.Up:
+                    holdkey = HoldKey.Up;
+                    break;
+                case Key.Down:
+                    holdkey = HoldKey.Down;
+                    break;
             }
+        }
 
-            private void Window_PreviewKeyUp(object sender, KeyEventArgs e)
+        private void Window_PreviewKeyUp(object sender, KeyEventArgs e)
+        {
+        }
+
+        private void PytonStep(double horizontal, double vertical)
+        {
+            Field.Children.Remove(Pyton.Last().Figure);
+
+            Pyton.AddFirst(new Segment
             {
-                switch (e.Key)
+                Figure = new Ellipse
                 {
-                    case Key.Left:
-                        if (holdkey == HoldKey.Left)
-                        {
-                            holdkey = HoldKey.None;
-                        }
-                        break;
-                    case Key.Right:
-                        if (holdkey == HoldKey.Right)
-                        {
-                            holdkey = HoldKey.None;
-                        }
-                        break;
-                    case Key.Up:
-                        if (holdkey == HoldKey.Up)
-                        {
-                            holdkey = HoldKey.None;
-                        }
-                        break;
+                    Width = 20,
+                    Height = 20,
+                    Fill = Brushes.Green
+                },
+                X = Pyton.First().X + horizontal,
+                Y = Pyton.First().Y + vertical,
+            });
 
-                }
-            }
-        
+            Pyton.Remove(Pyton.Last());
+
+            Field.Children.Add(Pyton.First().Figure);
+            Canvas.SetLeft(Pyton.First().Figure, Pyton.First().X);
+            Canvas.SetTop(Pyton.First().Figure, Pyton.First().Y);
+        }
+
     }
 }
