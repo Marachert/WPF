@@ -289,7 +289,6 @@ namespace WpfApp1
             }
         }
 
-
     }
 
     public enum HoldKey

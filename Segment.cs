@@ -14,6 +14,7 @@ namespace WpfApp1
         public FrameworkElement Figure { get; set; }
         public double X { get; set; }
         public double Y { get; set; }
+        public static double FIGURE_SIZE = 15;
 
         //Связи:
         // Наследование - самая сильная
@@ -31,5 +32,17 @@ namespace WpfApp1
             Canvas.SetLeft(Figure, X);
             Canvas.SetTop(Figure, Y);
         }
+
+        public void Remove(Canvas field)
+        {
+            if (field.Children.Contains(Figure))
+            {
+                field.Children.Remove(Figure);
+            }
+
+            Canvas.SetLeft(Figure, X);
+            Canvas.SetTop(Figure, Y);
+        }
+
     }
 }
