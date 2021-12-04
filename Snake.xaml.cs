@@ -20,12 +20,12 @@ namespace WpfApp1
     /// </summary>
     public partial class Snake : Window
     {
-        private LinkedList<Segment> Pyton;
+        private Pyton pyton;
+        FoodFor apple;
         DispatcherTimer timer;
         MoveDirection moveDirection;
 
         private Random random;
-        private Segment food;
 
         public Snake()
         {
@@ -36,27 +36,8 @@ namespace WpfApp1
             timer.Tick += TimerTickFood;
             random = new Random();
 
-            Pyton = new LinkedList<Segment>();
-
-            for (int i = 0; i < 5; ++i)
-            {
-                Pyton.AddLast(new Segment
-                {
-                    Figure = new Ellipse
-                    {
-                        Width = Segment.FIGURE_SIZE,
-                        Height = Segment.FIGURE_SIZE,
-                        Fill = new SolidColorBrush(
-                            Color.FromRgb(
-                                (byte)random.Next(100,250),
-                                (byte)random.Next(100, 250),
-                                (byte)random.Next(100, 250)))
-                    },
-                    X = Segment.FIGURE_SIZE * 10 + i * Segment.FIGURE_SIZE,
-                    Y = Segment.FIGURE_SIZE
-                });
-            }
-            food = RandFood();
+            pyton = new Pyton();
+            apple = new FoodFor(pyton);
         }
 
         private void TimerTick(object sender, EventArgs e)
@@ -64,41 +45,39 @@ namespace WpfApp1
             switch (moveDirection)
             {
                 case MoveDirection.Left:
-                    PytonStep(-Segment.FIGURE_SIZE, 0d);
+                    pyton.Move(-Segment.FIGURE_SIZE, 0d, Field);
                     break;
 
                 case MoveDirection.Right:
-                    PytonStep(Segment.FIGURE_SIZE, 0d);
+                    pyton.Move(Segment.FIGURE_SIZE, 0d, Field);
                     break;
 
                 case MoveDirection.Up:
-                    PytonStep(0d, -Segment.FIGURE_SIZE);
+                    pyton.Move(0d, -Segment.FIGURE_SIZE, Field);
                     break;
 
                 case MoveDirection.Down:
-                    PytonStep(0d, Segment.FIGURE_SIZE);
+                    pyton.Move(0d, Segment.FIGURE_SIZE, Field);
                     break;
             }
         }
 
         private void TimerTickFood(object sender, EventArgs e)
         {
-            if (Pyton.First().X == food.X && Pyton.First().Y == food.Y)
+            if (pyton.Body.First().X == apple.Fruit.X && 
+                pyton.Body.First().Y == apple.Fruit.Y)
             {
-                Pyton.AddLast(food);
-                food.Remove(Field);
-                food = RandFood();
-                food.Show(Field);
+                pyton.Body.Add(apple.Fruit);
+                apple.Remove(Field);
+                apple = new FoodFor(pyton);
+                apple.Show(Field);
             }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            foreach (var segment in Pyton)
-            {
-                segment.Show(Field);
-            }
-            food.Show(Field);
+            pyton.Show(Field);
+            apple.Show(Field);
             timer.Start();
         }
 
@@ -131,79 +110,6 @@ namespace WpfApp1
                     }
                     break;
             }
-        }
-
-        private void Window_PreviewKeyUp(object sender, KeyEventArgs e)
-        {
-        }
-
-        private void PytonStep(double horizontal, double vertical)
-        {
-
-            Field.Children.Remove(Pyton.Last().Figure);
-
-            Pyton.AddFirst(new Segment
-            {
-                Figure = new Ellipse
-                {
-                    Width = Segment.FIGURE_SIZE,
-                    Height = Segment.FIGURE_SIZE,
-                    Fill = new SolidColorBrush(
-                            Color.FromRgb(
-                                (byte)random.Next(100, 250),
-                                (byte)random.Next(100, 250),
-                                (byte)random.Next(100, 250)))
-                },
-                X = Pyton.First().X + horizontal,
-                Y = Pyton.First().Y + vertical,
-            });
-
-            Pyton.Remove(Pyton.Last());
-
-            Pyton.First().Show(Field);
-        }
-
-        private bool IsPytonPart(double coordX, double coordY)
-        {
-            foreach (Segment part in Pyton)
-            {
-                if (coordX == part.X && coordY == part.Y)
-                {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        private Segment RandFood()
-        {
-            double randomX;
-            double randomY;
-
-            do
-            {
-                randomX = random.Next(80) * Segment.FIGURE_SIZE;
-                randomY = random.Next(50) * Segment.FIGURE_SIZE;
-
-            } while (IsPytonPart(randomX, randomY));
-
-            Segment food = new Segment
-            {
-                Figure = new Ellipse
-                {
-                    Width = Segment.FIGURE_SIZE,
-                    Height = Segment.FIGURE_SIZE,
-                    Fill = new SolidColorBrush(
-                            Color.FromRgb(
-                                (byte)random.Next(100, 250),
-                                (byte)random.Next(100, 250),
-                                (byte)random.Next(100, 250)))
-                },
-                X = randomX,
-                Y = randomY
-            };
-
-            return food;
         }
 
         private enum MoveDirection
