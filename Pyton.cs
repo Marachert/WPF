@@ -72,11 +72,33 @@ namespace WpfApp1
 
                 segment.X = segment1.X;
                 segment.Y = segment1.Y;
-            }
-            this.Body[0].X += horizontal;
-            this.Body[0].Y += vertical;
+            }                   
 
+            if (this.Body[0].X >= canvas.ActualWidth)
+            {
+                this.Body[0].X = Segment.FIGURE_SIZE;
+                this.Body[0].Y += vertical;
+            }
+            else if (this.Body[0].X <= 0)
+            {
+                this.Body[0].X = canvas.ActualWidth - Segment.FIGURE_SIZE;
+                this.Body[0].Y += vertical;
+            }
+            else if (this.Body[0].Y >= canvas.ActualHeight)
+            {
+                this.Body[0].Y = Segment.FIGURE_SIZE;
+            }
+            else if (this.Body[0].Y <= 0)
+            {
+                this.Body[0].Y = canvas.ActualHeight - Segment.FIGURE_SIZE;
+            }
+            else
+            {
+                this.Body[0].X += horizontal;
+                this.Body[0].Y += vertical;
+            }
             this.Show(canvas);
+
         }
 
         public bool PartOf(double horizontal, double vertical)
@@ -90,5 +112,6 @@ namespace WpfApp1
             }
             return false;
         }
+
     }
 }

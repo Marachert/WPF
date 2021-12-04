@@ -31,7 +31,7 @@ namespace WpfApp1
         {
             InitializeComponent();
             timer = new DispatcherTimer(); //Системный ресурс, зависит от системы. Как "запускатель" функции
-            timer.Interval = TimeSpan.FromMilliseconds(100);
+            timer.Interval = TimeSpan.FromMilliseconds(50);
             timer.Tick += TimerTick;
             timer.Tick += TimerTickFood;
             random = new Random();
