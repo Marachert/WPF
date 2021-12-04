@@ -64,10 +64,12 @@
     <Compile Include="FeedBack.xaml.cs">
       <DependentUpon>FeedBack.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Food.cs" />
     <Compile Include="Minesweeper.xaml.cs">
       <DependentUpon>Minesweeper.xaml</DependentUpon>
     </Compile>
     <Compile Include="Product.cs" />
+    <Compile Include="Pyton.cs" />
     <Compile Include="Segment.cs" />
     <Compile Include="Snake.xaml.cs">
       <DependentUpon>Snake.xaml</DependentUpon>
