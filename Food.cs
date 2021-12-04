@@ -20,19 +20,23 @@ namespace WpfApp1
     {
         public Segment Fruit { get; set; }
         Random random;
+        Canvas canvas;
 
-        public FoodFor(Pyton pyton)
+        public FoodFor(Pyton pyton, Canvas canvas)
         {
             double randomX;
             double randomY;
+            this.canvas = canvas; 
             random = new Random();
 
             do
             {
-                randomX = random.Next(80) * Segment.FIGURE_SIZE;
-                randomY = random.Next(50) * Segment.FIGURE_SIZE;
+                randomX = random.Next(10) * Segment.FIGURE_SIZE;
+                randomY = random.Next(5) * Segment.FIGURE_SIZE;
 
-            } while (pyton.PartOf(randomX, randomY));
+            } while (pyton.PartOf(randomX, randomY) &&
+                     randomX > canvas.Width &&
+                     randomY > canvas.Height);
 
             Fruit = new Segment
             {
@@ -51,12 +55,12 @@ namespace WpfApp1
             };
         }
 
-        public void Remove(Canvas canvas)
+        public void Remove()
         {
             Fruit?.Remove(canvas);
         }
 
-        public void Show(Canvas canvas)
+        public void Show()
         {
             Fruit?.Show(canvas);
         }

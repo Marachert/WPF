@@ -24,20 +24,21 @@ namespace WpfApp1
         FoodFor apple;
         DispatcherTimer timer;
         MoveDirection moveDirection;
-
         private Random random;
+        private double speed;
 
         public Snake()
         {
             InitializeComponent();
+            speed = 100;
             timer = new DispatcherTimer(); //Системный ресурс, зависит от системы. Как "запускатель" функции
-            timer.Interval = TimeSpan.FromMilliseconds(50);
+            timer.Interval = TimeSpan.FromMilliseconds(speed);
             timer.Tick += TimerTick;
             timer.Tick += TimerTickFood;
             random = new Random();
 
-            pyton = new Pyton();
-            apple = new FoodFor(pyton);
+            pyton = new Pyton(Field);
+            apple = new FoodFor(pyton, Field);
         }
 
         private void TimerTick(object sender, EventArgs e)
@@ -45,19 +46,19 @@ namespace WpfApp1
             switch (moveDirection)
             {
                 case MoveDirection.Left:
-                    pyton.Move(-Segment.FIGURE_SIZE, 0d, Field);
+                    pyton.Move(-Segment.FIGURE_SIZE, 0d);
                     break;
 
                 case MoveDirection.Right:
-                    pyton.Move(Segment.FIGURE_SIZE, 0d, Field);
+                    pyton.Move(Segment.FIGURE_SIZE, 0d);
                     break;
 
                 case MoveDirection.Up:
-                    pyton.Move(0d, -Segment.FIGURE_SIZE, Field);
+                    pyton.Move(0d, -Segment.FIGURE_SIZE);
                     break;
 
                 case MoveDirection.Down:
-                    pyton.Move(0d, Segment.FIGURE_SIZE, Field);
+                    pyton.Move(0d, Segment.FIGURE_SIZE);
                     break;
             }
         }
@@ -67,17 +68,25 @@ namespace WpfApp1
             if (pyton.Body.First().X == apple.Fruit.X && 
                 pyton.Body.First().Y == apple.Fruit.Y)
             {
+                speed -= 1;
+
+                if (speed == 50)
+                {
+                    speed = 100;
+                }
+
+                timer.Interval = TimeSpan.FromMilliseconds(speed);
                 pyton.Body.Add(apple.Fruit);
-                apple.Remove(Field);
-                apple = new FoodFor(pyton);
-                apple.Show(Field);
+                apple.Remove();
+                apple = new FoodFor(pyton, Field);
+                apple.Show();
             }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            pyton.Show(Field);
-            apple.Show(Field);
+            pyton.Show();
+            apple.Show();
             timer.Start();
         }
 

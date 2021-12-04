@@ -5,12 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Snake" Height="450" Width="800"
+        Title="Snake" Height="300" Width="600"
         PreviewKeyDown="Window_PreviewKeyDown"
         Loaded="Window_Loaded">
-    <Grid>
-        <Canvas x:Name="Field">
-
+    <Grid 
+        Width="765"
+        Height="375">
+        <Border BorderBrush="Black" BorderThickness="3">
+        <Canvas x:Name="Field"
+                Width="750"
+                Height="345">
         </Canvas>
+        </Border>
     </Grid>
 </Window>

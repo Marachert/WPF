@@ -19,11 +19,13 @@ namespace WpfApp1
     {
         public List<Segment> Body { get; set; }
         private Random random;
+        Canvas canvas;
 
-        public Pyton()
+        public Pyton(Canvas canvas)
         {
             Body = new List<Segment>();
             random = new Random();
+            this.canvas = canvas;
 
             for (int i = 0; i < 5; ++i)
             {
@@ -39,13 +41,13 @@ namespace WpfApp1
                                 (byte)random.Next(100, 250),
                                 (byte)random.Next(100, 250)))
                     },
-                    X = Segment.FIGURE_SIZE * 10 + i * Segment.FIGURE_SIZE,
-                    Y = Segment.FIGURE_SIZE
+                    X = random.Next(10, 15) * Segment.FIGURE_SIZE,
+                    Y = random.Next(5, 10) * Segment.FIGURE_SIZE
                 });
             }
         }
 
-        public void Show(Canvas canvas)
+        public void Show()
         {
             foreach (var segment in Body)
             {
@@ -53,7 +55,7 @@ namespace WpfApp1
             }
         }
 
-        public void Remove(Canvas canvas)
+        public void Remove()
         {
             foreach(var segment in Body)
             {
@@ -61,9 +63,9 @@ namespace WpfApp1
             }
         }
 
-        public void Move(double horizontal, double vertical, Canvas canvas)
+        public void Move(double horizontal, double vertical)
         {
-            this?.Remove(canvas);
+            this?.Remove();
 
             for (int i = this.Body.Count - 1; i >= 1; i--)
             {
@@ -74,30 +76,34 @@ namespace WpfApp1
                 segment.Y = segment1.Y;
             }                   
 
-            if (this.Body[0].X >= canvas.ActualWidth)
+            if (this.Body[0].X >= canvas.Width)
             {
-                this.Body[0].X = Segment.FIGURE_SIZE;
+                this.Body[0].X = 0;
                 this.Body[0].Y += vertical;
             }
-            else if (this.Body[0].X <= 0)
+            else if (this.Body[0].X < 0)
             {
-                this.Body[0].X = canvas.ActualWidth - Segment.FIGURE_SIZE;
+                this.Body[0].X = canvas.Width - Segment.FIGURE_SIZE;
                 this.Body[0].Y += vertical;
+
             }
-            else if (this.Body[0].Y >= canvas.ActualHeight)
+            else if (this.Body[0].Y >= canvas.Height)
             {
-                this.Body[0].Y = Segment.FIGURE_SIZE;
+                this.Body[0].Y = 0;
+                this.Body[0].X += horizontal;
+
             }
-            else if (this.Body[0].Y <= 0)
+            else if (this.Body[0].Y < 0)
             {
-                this.Body[0].Y = canvas.ActualHeight - Segment.FIGURE_SIZE;
+                this.Body[0].Y = canvas.Height - Segment.FIGURE_SIZE;
+                this.Body[0].X += horizontal;
             }
             else
             {
                 this.Body[0].X += horizontal;
                 this.Body[0].Y += vertical;
             }
-            this.Show(canvas);
+            this.Show();
 
         }
 
