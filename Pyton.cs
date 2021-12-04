@@ -73,10 +73,24 @@ namespace WpfApp1
                 segment.X = segment1.X;
                 segment.Y = segment1.Y;
             }
-            this.Body[0].X += horizontal;
-            this.Body[0].Y += vertical;
-
+             
+            if (this.Body[0].X == 100)
+            {
+                this.Body[0].X = 400;
+                this.Body[0].Y += vertical;
+            }
+            else if (this.Body[0].X == 401)
+            {
+                this.Body[0].X = 0;
+                this.Body[0].Y += vertical;
+            }
+            else
+            {
+                this.Body[0].X += horizontal;
+                this.Body[0].Y += vertical;
+            }
             this.Show(canvas);
+
         }
 
         public bool PartOf(double horizontal, double vertical)
@@ -89,6 +103,14 @@ namespace WpfApp1
                 }
             }
             return false;
+        }
+
+        private enum BoarderTouch
+        {
+            LeftSide,
+            RightSide,
+            TopSide,
+            BottomSide,
         }
     }
 }
