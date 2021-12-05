@@ -91,6 +91,8 @@ namespace WpfApp1
                 apple = new FoodFor(pyton, Field);
                 apple.Show();
             }
+
+
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
