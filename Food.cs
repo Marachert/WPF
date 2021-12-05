@@ -31,8 +31,8 @@ namespace WpfApp1
 
             do
             {
-                randomX = random.Next(10) * Segment.FIGURE_SIZE;
-                randomY = random.Next(5) * Segment.FIGURE_SIZE;
+                randomX = random.Next(30) * Segment.FIGURE_SIZE;
+                randomY = random.Next(20) * Segment.FIGURE_SIZE;
 
             } while (pyton.PartOf(randomX, randomY) &&
                      randomX > canvas.Width &&
