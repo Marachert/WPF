@@ -27,6 +27,11 @@ namespace WpfApp1
         private Random random;
         private double speed;
 
+        RotateTransform rotate0 = new RotateTransform(0, Segment.FIGURE_SIZE / 2, Segment.FIGURE_SIZE / 2);
+        RotateTransform rotate90 = new RotateTransform(90, Segment.FIGURE_SIZE / 2, Segment.FIGURE_SIZE / 2);
+        RotateTransform rotate180 = new RotateTransform(180, Segment.FIGURE_SIZE / 2, Segment.FIGURE_SIZE / 2);
+        RotateTransform rotate270 = new RotateTransform(270, Segment.FIGURE_SIZE / 2, Segment.FIGURE_SIZE / 2);
+
         public Snake()
         {
             InitializeComponent();
@@ -39,6 +44,7 @@ namespace WpfApp1
 
             pyton = new Pyton(Field);
             apple = new FoodFor(pyton, Field);
+            moveDirection = MoveDirection.Right;
         }
 
         private void TimerTick(object sender, EventArgs e)
@@ -46,18 +52,22 @@ namespace WpfApp1
             switch (moveDirection)
             {
                 case MoveDirection.Left:
+                    pyton.Body[0].Figure.RenderTransform = rotate180;
                     pyton.Move(-Segment.FIGURE_SIZE, 0d);
                     break;
 
                 case MoveDirection.Right:
+                    pyton.Body[0].Figure.RenderTransform = rotate0;
                     pyton.Move(Segment.FIGURE_SIZE, 0d);
                     break;
 
                 case MoveDirection.Up:
+                    pyton.Body[0].Figure.RenderTransform = rotate270;
                     pyton.Move(0d, -Segment.FIGURE_SIZE);
                     break;
 
                 case MoveDirection.Down:
+                    pyton.Body[0].Figure.RenderTransform = rotate90;
                     pyton.Move(0d, Segment.FIGURE_SIZE);
                     break;
             }

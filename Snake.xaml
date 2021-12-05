@@ -12,10 +12,17 @@
         Width="765"
         Height="375">
         <Border BorderBrush="Black" BorderThickness="3">
-        <Canvas x:Name="Field"
+            <Canvas x:Name="Field"
                 Width="750"
                 Height="345">
-        </Canvas>
+
+                <!--<Image
+                    x:Name="SnakeHead"
+                    Source="SnakeHead.png"
+                    Width="15"
+                    Height="15"/>-->
+
+            </Canvas>
         </Border>
     </Grid>
 </Window>

@@ -27,7 +27,26 @@ namespace WpfApp1
             random = new Random();
             this.canvas = canvas;
 
-            for (int i = 0; i < 5; ++i)
+            Image myImage = new Image();
+            BitmapImage bi3 = new BitmapImage();
+            bi3.BeginInit();
+            bi3.UriSource = new Uri("SnakeHead.png", UriKind.Relative);
+            bi3.EndInit();
+            myImage.Stretch = Stretch.Fill;
+            myImage.Source = bi3;
+            myImage.Width = Segment.FIGURE_SIZE + 3;
+            myImage.Height = Segment.FIGURE_SIZE + 3;
+
+            Segment segment = new Segment
+            {
+                Figure = myImage,
+                X = Segment.FIGURE_SIZE,
+                Y = Segment.FIGURE_SIZE,                
+            };
+
+            Body.Add(segment);
+
+            for (int i = 1; i < 5; ++i)
             {
                 Body.Add(new Segment
                 {
@@ -41,8 +60,8 @@ namespace WpfApp1
                                 (byte)random.Next(100, 250),
                                 (byte)random.Next(100, 250)))
                     },
-                    X = random.Next(10, 15) * Segment.FIGURE_SIZE,
-                    Y = random.Next(5, 10) * Segment.FIGURE_SIZE
+                    X = Segment.FIGURE_SIZE,
+                    Y = Segment.FIGURE_SIZE
                 });
             }
         }
